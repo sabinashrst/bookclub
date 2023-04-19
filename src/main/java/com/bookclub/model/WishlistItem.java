@@ -6,54 +6,55 @@ import javax.validation.constraints.NotNull;
 import org.springframework.data.annotation.Id;
 
 public class WishlistItem {
-	
-	@Id
+
+    @Id
     private String id;
 
-	
-	@NotNull
+
+    @NotNull
     @NotEmpty(message = "ISBN is a required field.")
-	private String isbn;
-	
-	@NotNull
+    private String isbn;
+
+    @NotNull
     @NotEmpty(message = "Title is a required field.")
-	private String title;
-	
-	 public WishlistItem() {}
+    private String title;
 
-	public WishlistItem(String isbn, String title) {
-		this.isbn = isbn;
-		this.title = title;
-	}
-	
+    public WishlistItem() {
+    }
 
-	public String getId() {
-		return id;
-	}
+    public WishlistItem(String isbn, String title) {
+        this.isbn = isbn;
+        this.title = title;
+    }
 
-	public void setId(String id) {
-		this.id = id;
-	}
 
-	public String getIsbn() {
-		return isbn;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public void setIsbn(String isbn) {
-		this.isbn = isbn;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public String getTitle() {
-		return title;
-	}
+    public String getIsbn() {
+        return isbn;
+    }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
 
-	@Override
-	public String toString() {
-		return "WishlistItem [id=" + id + ", isbn=" + isbn + ", title=" + title + "]";
-	}
-	
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    @Override
+    public String toString() {
+        return "WishlistItem [id=" + id + ", isbn=" + isbn + ", title=" + title + "]";
+    }
+
 }
