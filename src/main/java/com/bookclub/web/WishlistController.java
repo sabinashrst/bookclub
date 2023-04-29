@@ -29,10 +29,7 @@ public class WishlistController {
 	
     @RequestMapping(method = RequestMethod.GET)
     public String showWishlist(Model model) {
-    	
-        List<WishlistItem> wishlist = wishlistDao.list();
-        model.addAttribute("wishlist", wishlist);
-        return "wishlist/list";
+    	return "wishlist/list";
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/new")
