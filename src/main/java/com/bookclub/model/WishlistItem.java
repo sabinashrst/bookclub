@@ -26,9 +26,10 @@ public class WishlistItem {
     public WishlistItem() {
     }
 
-    public WishlistItem(String isbn, String title) {
+    public WishlistItem(String isbn, String title, String username) {
         this.isbn = isbn;
         this.title = title;
+        this.username = username;
     }
 
 
